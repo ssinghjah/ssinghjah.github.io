@@ -1,15 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
+    <title>WCF Parking and Accomodation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-        <p>This is my new website which is hosted on GitHub Pages!</p>
-    </main>
+    <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="menu">
+	    <li>
+	      <strong>WCF Parking and Accomodation</strong>
+	    </li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><button id="viewToggle" type="button" class="button">Hide List</button></li>
+          </ul>
+        </div>
+      </div>
+    <div class="grid-x grid-padding-x"></div>
+<!--    
+    <div class="row">
+            <div class="large-4 medium-4 cell">
+              <div class="callout text-center">
+                <h3>WCF Parking and Accomodation</h3>
+              </div>
+ </div> -->
+<!--    <div id="map" class="large-4 medium-4 cell">-->
+<!--    &lt;!&ndash;-->
+<!--      The `defer` attribute causes the callback to execute after the full HTML-->
+<!--      document has been parsed. For non-blocking uses, avoiding race conditions,-->
+<!--      and consistent behavior across browsers, consider loading using Promises.-->
+<!--      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api-->
+<!--      for more information.-->
+<!--      &ndash;&gt;-->
+<!--    </div>-->
+    </div>
+
+      <div class="grid-x grid-padding-x" width="100%">
+        <div id="map" class="medium-9 cell" style="height:90vh">
+          <div id="list2" style="height:90vh; display:none" class="row">
+            <div class="medium-6 cell" id="parkingList2">
+              <h4>Parking</h4>
+            </div>
+            <div class="medium-6 cell" id="accoList">
+              <h4>Accomodation</h4>
+            </div>
+            </div>
+        </div>
+          <div id="list" class="medium-3 cell">
+          <div class="row">
+          <!--<button id="viewToggle" class="submit success button">View List</button> !-->
+          </div>
+          <div id="sideInfo" class="row">
+          </div>
+	  <div id="parkingList" class="row">
+	    <h4>Parking</h4>
+	  </div>
+        </div>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVpFm6MJYLgNAdyOTkI_jPyZ0B1bjgbmI&callback=initMap&v=weekly"
+      defer
+    ></script>
   </body>
 </html>
