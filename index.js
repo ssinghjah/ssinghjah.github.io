@@ -1,3 +1,6 @@
+import data from './data.js'
+console.log(data)
+
 function initMap() {    
   const dc = new google.maps.LatLng(38.906624, -77.065774);
   const markerMap = new google.maps.Map(document.getElementById("map"), {
