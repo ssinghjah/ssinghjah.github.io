@@ -1,1 +1,2 @@
-export data = "mydata";
+const data = "mydata";
+export default data;
