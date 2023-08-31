@@ -19,11 +19,12 @@ function initMap() {
 
    let path = window.location.hostname.replace(/\//g,''); // Remove all slashes from string
 
-
-   $.post( "http://" + path + ":3000/getdata", function(data) {
+    console.log(data);
+    addMapMarkers(data, icons, markerMap);
+   /*$.post( "https://" + path + ":3000/getdata", function(data) {
 	    console.log(data);
 	    addMapMarkers(data, icons, markerMap);
-	});
+	});*/
 }
 
 
@@ -36,7 +37,6 @@ function addMapMarkers(data, icons, markerMap){
 
 var ToDisplay = ["Name", "Address", "Cost", "Distance to the Mall", "Nearest Exit from VA", "Nearest Exit from MD", "Website", "Navigate_URL"];
 var HyperLinks = ["Navigate_URL", "Website"];
-
 
 function addMarker(infoHeaders, infoValues, icons, markerMap){
     var latIndex = infoHeaders.indexOf("Lat");
