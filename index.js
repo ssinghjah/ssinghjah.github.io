@@ -13,7 +13,7 @@ function initMap() {
   const iconBase = "https://ssinghjah.github.io/images/"
 
   const icons = {
-	parking: iconBase + "orangeParking.jpg"
+	parking: iconBase + "orangeParking.png"
     }
 
   const iconsOld = {
