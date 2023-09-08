@@ -41,42 +41,6 @@
 <!--      &ndash;&gt;-->
 <!--    </div>-->
     </div>
-    <ul class = "tabs" data-tabs id = "tabs_example">
-         <li class = "tabs-title is-active"><a href = "#tab1">Player 1</a></li>
-         <li class = "tabs-title"><a href = "#tab2">Player 2</a></li>
-         <li class = "tabs-title"><a href = "#tab3">Player 3</a></li>
-         <li class = "tabs-title"><a href = "#tab4">Player 4</a></li>
-         <li class = "tabs-title"><a href = "#tab5">Player 5</a></li>
-      </ul>
-
-      <div class = "tabs-content" data-tabs-content = "tabs_example">
-         <div class = "tabs-panel is-active" id = "tab1">
-            <p>First Player</p>
-            <p>Sachin Tendulkar</p>
-         </div>
-
-         <div class = "tabs-panel" id = "tab2">
-            <p>Second Player</p>
-            <p>M S Dhoni</p>
-         </div>
-
-         <div class = "tabs-panel" id = "tab3">
-            <p>Third Player</p>
-            <p>Shane Warne</p>
-         </div>
-
-         <div class = "tabs-panel" id = "tab4">
-            <p>Fourth Player</p>
-            <p>Shaun Pollock</p>
-         </div>
-
-         <div class = "tabs-panel" id = "tab5">
-            <p>Five Player</p>
-            <p>Adam Gilchrist</p>
-         </div>
-
-      </div>
-
       <div class="grid-x grid-padding-x" width="100%">
         <div id="map" class="medium-9 cell" style="height:90vh">
           <div id="list2" style="height:90vh; display:none" class="row">
@@ -90,11 +54,16 @@
         </div>
         <div id="list" class="medium-3 cell">
 	  <ul class="tabs" data-tabs id="example-tabs">
-	    <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
-	    <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
+	    <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Parking</a></li>
+	    <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Metro Stations</a></li>
+	    <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">Accomodation</a></li>
 	  </ul>
 	  <div class="tabs-content" data-tabs-content="example-tabs">
 	    <div class="tabs-panel is-active" id="panel1">
+	      <div id="parkingList" class="row">
+		<h4>Parking</h4>
+	      </div>
+
 	      <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
 	    </div>
 	    <div class="tabs-panel" id="panel2">
@@ -107,10 +76,6 @@
           </div>
           <div id="sideInfo" class="row">
           </div>
-
-	  <div id="parkingList" class="row">
-	    <h4>Parking</h4>
-	  </div>
         </div>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
