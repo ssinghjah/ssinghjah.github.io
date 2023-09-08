@@ -9,10 +9,14 @@ function initMap() {
     zoom: 15,
   });
 
-  const iconBase =
-    "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
+  const iconBaseOld = "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
+  const iconBase = "https://ssinghjah.github.io/images/"
 
   const icons = {
+	parking: iconBase + "orangeParking.png"
+    }
+
+  const iconsOld = {
     parking: iconBase + "parking_lot_maps.png",
     library: iconBase + "library_maps.png",
     info: iconBase + "info-i_maps.png"
