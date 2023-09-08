@@ -1,5 +1,6 @@
 import data from './data.js'
 console.log(data)
+console.log("Sep 7, 2023")
 
 function initMap() {    
   const dc = new google.maps.LatLng(38.906624, -77.065774);
