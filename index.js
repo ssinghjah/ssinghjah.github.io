@@ -185,7 +185,7 @@ $(function()
 	        $("#viewToggle").data("state", "on");
 	        $("#parkingToggle").css("font-weight", "bold");
 	    }
-	    }
+	    });
 	});
 
 })
