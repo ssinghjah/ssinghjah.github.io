@@ -11,7 +11,7 @@
   <body>
     <div class="top-bar">
         <div class="top-bar-left">
-        <ul class="menu" data-dropdown-menu>
+          <ul class="menu">
 	    <li>
 	      <strong>WCF Parking and Accomodation</strong>
 	    </li>
@@ -19,12 +19,20 @@
         </div>
         <div class="top-bar-right">
           <ul class="menu">
-              <li><button id="viewToggle" type="button" class="button">Hide List</button></li>
+	    <div class="switch large">
+	      <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
+	      <label class="switch-paddle" for="yes-no">
+		<span class="show-for-sr">Do you like me?</span>
+		<span class="switch-active" aria-hidden="true">Yes</span>
+		<span class="switch-inactive" aria-hidden="true">No</span>
+	      </label>
+	    </div>
+            <li><button id="viewToggle" type="button" class="button">Hide List</button></li>
           </ul>
         </div>
       </div>
     <div class="grid-x grid-padding-x"></div>
-<!--    
+<!--
     <div class="row">
             <div class="large-4 medium-4 cell">
               <div class="callout text-center">
@@ -43,6 +51,15 @@
     </div>
       <div class="grid-x grid-padding-x" width="100%">
         <div id="map" class="medium-9 cell" style="height:90vh">
+          <div id="list2" style="height:90vh; display:none" class="row">
+            <div class="medium-6 cell" id="parkingList2">
+              <h4>Parking</h4>
+            </div>
+            <div class="medium-6 cell" id="accoList">
+              <h4>Accomodation</h4>
+            </div>
+            </div>
+        </div>
         <div id="list" class="medium-3 cell">
 	  <ul class="tabs" data-tabs id="example-tabs">
 	    <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Parking</a></li>
