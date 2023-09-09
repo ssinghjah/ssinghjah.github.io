@@ -178,12 +178,14 @@ $(function()
 	    if (current_state == "on")
 	    {
 	        $("#viewToggle").data("state", "off");
-	        $("#parkingToggle").css("font-weight", "light");
+	        $("#parkingToggle").addClass("secondary");
+	        $("#parkingToggle").removeClass("primary");
 	    }
-	    else
+	    else if(current_state == "off")
 	    {
 	        $("#viewToggle").data("state", "on");
-	        $("#parkingToggle").css("font-weight", "bold");
+	        $("#parkingToggle").addClass("primary");
+	        $("#parkingToggle").removeClass("secondary");
 	    }
 	    });
 	});
