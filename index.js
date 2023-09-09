@@ -160,8 +160,20 @@ function toggleView(elem){
     }
 }
 
-function toggleLayer(){
-
+function toggleLayer(id){
+    var current_state = $("#" + id).data("state");
+            if (current_state == "on")
+            {
+                $("#" + id).data("state", "off");
+                $("#" + id).addClass("secondary");
+                $("#" + id).removeClass("primary");
+            }
+            else if(current_state == "off")
+            {
+                $("#" + id).data("state", "on");
+                $("#" + id).addClass("primary");
+                $("#" + id).removeClass("secondary");
+            }
 }
 
 window.initMap = initMap;
@@ -174,20 +186,7 @@ $(function()
 	    toggleView(this);})
 
     $("#parkingToggle").click(function(){
-	    var current_state = $(this).data("state");
-	    if (current_state == "on")
-	    {
-	        $("#parkingToggle").data("state", "off");
-	        $("#parkingToggle").addClass("secondary");
-	        $("#parkingToggle").removeClass("primary");
-	    }
-	    else if(current_state == "off")
-	    {
-	        $("#parkingToggle").data("state", "on");
-	        $("#parkingToggle").addClass("primary");
-	        $("#parkingToggle").removeClass("secondary");
-	    }
-	    });
+       toggleLayer("parkingToggle");
 	});
 
 $(document).ready(function() {
