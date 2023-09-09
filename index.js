@@ -174,7 +174,7 @@ $(function()
 	    toggleView(this);})
 
     $("#parkingToggle").click(function(){
-	    var current_state = $(elem).data("state");
+	    var current_state = $(this).data("state");
 	    if (current_state == "on")
 	    {
 	        $("#viewToggle").data("state", "off");
