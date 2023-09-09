@@ -160,25 +160,34 @@ function toggleView(elem){
     }
 }
 
+function toggleLayer(){
+
+}
+
 window.initMap = initMap;
 $(function()
 {
 	$("#viewToggle").data("state", "list");
-	$("#viewToggle").click(function(){
-	    toggleView(this);
-	})
+	$("#parkingToggle").data("state", "on");
 
-      $('#example-tabs').on('change.zf.tabs', function() {
-      // The debugger statement is used to establish 
-      // a JavaScript breakpoint in browser dev tools.
-      debugger;
-      if ($('#panel1:visible').length) {
-          console.log('Tab 1 panel shown.');          
-      }
-      if ($('#panel2:visible').length) {
-          console.log('Tab 2 panel shown.');
-      }
-   });
+	$("#viewToggle").click(function(){
+	    toggleView(this);})
+
+    $("#parkingToggle").click(function(){
+	    var current_state = $(elem).data("state");
+	    if (current_state == "on")
+	    {
+	        $("#viewToggle").data("state", "off");
+	        $("#parkingToggle").css("font-weight", "light");
+	    }
+	    else
+	    {
+	        $("#viewToggle").data("state", "on");
+	        $("#parkingToggle").css("font-weight", "bold");
+	    }
+	    }
+	});
+
 })
 
 $(document).ready(function() {
