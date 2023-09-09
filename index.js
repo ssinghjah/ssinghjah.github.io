@@ -177,13 +177,13 @@ $(function()
 	    var current_state = $(this).data("state");
 	    if (current_state == "on")
 	    {
-	        $("#viewToggle").data("state", "off");
+	        $("#parkingToggle").data("state", "off");
 	        $("#parkingToggle").addClass("secondary");
 	        $("#parkingToggle").removeClass("primary");
 	    }
 	    else if(current_state == "off")
 	    {
-	        $("#viewToggle").data("state", "on");
+	        $("#parkingToggle").data("state", "on");
 	        $("#parkingToggle").addClass("primary");
 	        $("#parkingToggle").removeClass("secondary");
 	    }
