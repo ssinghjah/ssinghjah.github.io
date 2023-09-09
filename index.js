@@ -181,12 +181,18 @@ $(function()
 {
 	$("#viewToggle").data("state", "list");
 	$("#parkingToggle").data("state", "on");
+	$("#accoToggle").data("state", "on");
+
 
 	$("#viewToggle").click(function(){
 	    toggleView(this);})
 
     $("#parkingToggle").click(function(){
        toggleLayer("parkingToggle");
+	});
+
+	$("#accoToggle").click(function(){
+       toggleLayer("accoToggle");
 	});
 });
 
