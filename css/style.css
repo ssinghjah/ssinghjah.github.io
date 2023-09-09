@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+.margin10{
+    margin: 10px;
+}
+
 /* 
  * Optional: Makes the sample page fill the window. 
  */
