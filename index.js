@@ -188,6 +188,7 @@ $(function()
     $("#parkingToggle").click(function(){
        toggleLayer("parkingToggle");
 	});
+}
 
 $(document).ready(function() {
             $(document).foundation();
