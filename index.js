@@ -1,10 +1,9 @@
 import data from './data.js'
 console.log(data)
 console.log("Sep 7, 2023");
-
-parkingMarkers = []
-accoMarkers = []
-metroMarkers = []
+var parkingMarkers = []
+var accoMarkers = []
+var metroMarkers = []
 var markerMap;
 
 function initMap() {    
