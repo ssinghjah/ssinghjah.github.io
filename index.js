@@ -93,7 +93,7 @@ function addMarker(infoHeaders, infoValues, icons, markerMap, markerList){
 
      $("#parkingList").append(infoHTML + "<br>")
 
-     markerList.append(marker);
+     markerList.push(marker);
 
       //return marker
 }
