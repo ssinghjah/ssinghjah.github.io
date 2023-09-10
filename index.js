@@ -81,19 +81,18 @@ function addMarker(infoHeaders, infoValues, icons, markerMap, markerList){
     icon: icons.parking,
     map: markerMap});
 
-
     var coordInfoWindow = new google.maps.InfoWindow({pixelOffset: new google.maps.Size(0, -25)});
     coordInfoWindow.setContent(infoHTML);
     coordInfoWindow.setPosition(markerPosition);
+    markerList.push(marker);
     marker.addListener("click", () => {
             coordInfoWindow.open({anchor: marker, map});
             //$("#sideInfo").empty();
             //$("#sideInfo").html(infoHTML);
       });
 
-     $("#parkingList").append(infoHTML + "<br>")
+     $("#parkingList").append(infoHTML + "<br>");
 
-     markerList.push(marker);
 
       //return marker
 }
