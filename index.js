@@ -40,7 +40,7 @@ function initMap() {
 function addMapMarkers(data, icons, markerMap){
  for (var i=0; i < data.values.length; i++)
  {
-    marker = addMarker(data.headers, data.values[i], icons, markerMap, parkingMarkers);
+    addMarker(data.headers, data.values[i], icons, markerMap, parkingMarkers);
  }
 }
 
