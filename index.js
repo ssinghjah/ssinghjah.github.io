@@ -1,6 +1,11 @@
 import data from './data.js'
 console.log(data)
-console.log("Sep 7, 2023")
+console.log("Sep 7, 2023");
+
+parkingMarkers = []
+accoMarkers = []
+metroMarkers = []
+var markerMap;
 
 function initMap() {    
   const dc = new google.maps.LatLng(38.906624, -77.065774);
@@ -36,7 +41,8 @@ function initMap() {
 function addMapMarkers(data, icons, markerMap){
  for (var i=0; i < data.values.length; i++)
  {
-    addMarker(data.headers, data.values[i], icons, markerMap);
+    marker = addMarker(data.headers, data.values[i], icons, markerMap);
+    parkingMarkers.append(marker);
  }
 }
 
@@ -88,6 +94,8 @@ function addMarker(infoHeaders, infoValues, icons, markerMap){
       });
 
       $("#parkingList").append(infoHTML + "<br>")
+
+      return marker
 }
 
 function addMarkerV1(markerFeature, markerIcon, markerMap){
@@ -160,6 +168,21 @@ function toggleView(elem){
     }
 }
 
+function toggleMarkerVisibility(allMarkers, markerMap, bDisplay){
+    numMarkers = allMarkers.length;
+    for(var i=0; i < numMarkers; i++)
+    {
+        if(bDisplay)
+        {
+            allMarkers[i].setMap(markerMap);
+        }
+        else
+        {
+            allMarkers[i].setMap(null);
+        }
+    }
+}
+
 function toggleLayer(id){
     var current_state = $("#" + id).data("state");
             if (current_state == "on")
@@ -182,7 +205,6 @@ $(function()
 	$("#viewToggle").data("state", "list");
 	$("#parkingToggle").data("state", "on");
 	$("#accoToggle").data("state", "on");
-
 
 	$("#viewToggle").click(function(){
 	    toggleView(this);})
