@@ -40,15 +40,14 @@ function initMap() {
 function addMapMarkers(data, icons, markerMap){
  for (var i=0; i < data.values.length; i++)
  {
-    marker = addMarker(data.headers, data.values[i], icons, markerMap);
-    parkingMarkers.append(marker);
+    marker = addMarker(data.headers, data.values[i], icons, markerMap, parkingMarkers);
  }
 }
 
 var ToDisplay = ["Name", "Address", "Cost", "Distance to the Mall", "Nearest Exit from VA", "Nearest Exit from MD", "Website", "Navigate_URL"];
 var HyperLinks = ["Navigate_URL", "Website"];
 
-function addMarker(infoHeaders, infoValues, icons, markerMap){
+function addMarker(infoHeaders, infoValues, icons, markerMap, markerList){
     var latIndex = infoHeaders.indexOf("Lat");
     var lngIndex = infoHeaders.indexOf("Lng");
 
@@ -82,19 +81,21 @@ function addMarker(infoHeaders, infoValues, icons, markerMap){
     icon: icons.parking,
     map: markerMap});
 
+
     var coordInfoWindow = new google.maps.InfoWindow({pixelOffset: new google.maps.Size(0, -25)});
-      coordInfoWindow.setContent(infoHTML);
-      coordInfoWindow.setPosition(markerPosition);
-      marker.addListener("click", () =>
-      {
+    coordInfoWindow.setContent(infoHTML);
+    coordInfoWindow.setPosition(markerPosition);
+    marker.addListener("click", () => {
             coordInfoWindow.open({anchor: marker, map});
             //$("#sideInfo").empty();
             //$("#sideInfo").html(infoHTML);
       });
 
-      $("#parkingList").append(infoHTML + "<br>")
+     $("#parkingList").append(infoHTML + "<br>")
 
-      return marker
+     markerList.append(marker);
+
+      //return marker
 }
 
 function addMarkerV1(markerFeature, markerIcon, markerMap){
