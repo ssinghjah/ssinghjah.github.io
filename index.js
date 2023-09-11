@@ -187,14 +187,14 @@ function toggleLayer(id){
         if (current_state == "on")
         {
             $("#" + id).data("state", "off");
-            $("#" + id).addClass("secondary");
-            $("#" + id).removeClass("primary");
+            $("#" + id).addClass("primary");
+            $("#" + id).removeClass("secondary");
         }
         else if(current_state == "off")
         {
             $("#" + id).data("state", "on");
-            $("#" + id).addClass("primary");
-            $("#" + id).removeClass("secondary");
+            $("#" + id).addClass("secondary");
+            $("#" + id).removeClass("primary");
         }
 }
 
