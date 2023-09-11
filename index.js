@@ -205,7 +205,7 @@ $(function()
 	$("#parkingToggle").data("state", "on");
 	$("#parkingToggle").addClass("secondary");
 	$("#accoToggle").data("state", "on");
-	$("#parkingToggle").addClass("secondary");
+	$("#accoToggle").addClass("secondary");
 
 	$("#viewToggle").click(function(){
 	    toggleView(this);})
