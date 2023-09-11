@@ -1,5 +1,5 @@
 import data from './data.js'
-import metroData './data.js'
+import metroData from './data.js'
 console.log(data)
 console.log(metroData)
 
@@ -33,10 +33,6 @@ function initMap() {
 
     console.log(data);
     addMapMarkers(data, icons, markerMap);
-   /*$.post( "https://" + path + ":3000/getdata", function(data) {
-	    console.log(data);
-	    addMapMarkers(data, icons, markerMap);
-	});*/
 }
 
 
