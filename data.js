@@ -51,7 +51,7 @@ const data = {
   ]
 };
 
-const metroData = {
+export const metroData = {
   info_type: 'metros',
   headers: [
     'ID',
@@ -76,5 +76,4 @@ const metroData = {
 };
 
 export default data;
-export default metroData;
 
