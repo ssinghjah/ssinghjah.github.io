@@ -1,4 +1,4 @@
-const data = {
+export const data = {
   info_type: 'parking',
   headers: [
     'ID',
@@ -74,6 +74,4 @@ export const metroData = {
     ]
   ]
 };
-
-export default data;
 

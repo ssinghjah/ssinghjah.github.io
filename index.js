@@ -1,5 +1,5 @@
-import data from './data.js'
-import metroData from './data.js'
+import { data, metroData } from './data.js';
+
 console.log(data)
 console.log(metroData)
 
@@ -216,7 +216,7 @@ $(function()
 
 	$("#accoToggle").click(function(){
        toggleLayer("accoToggle");
-       toggleMarkerVisibility();
+       toggleMarkerVisibility(accoMarkers, markerMap, $(this).data("state"));
 	});
 });
 
