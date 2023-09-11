@@ -103,4 +103,30 @@ const metroData = {
   ]
 };
 
+const metroData = {
+  info_type: 'metros',
+  headers: [
+    'ID',
+    'Name',
+    'Lat',
+    'Lng',
+    'Line',
+    'Navigate',
+    'Distance to the Mall'
+  ],
+  values: [
+    [
+      '1',
+      'Metro Center',
+      '38.898666',
+      '-77.027647',
+      'Blue,Orange,Red',
+      'https://www.google.com/maps/dir//Metro+Center,+607+13th+St+NW,+Washington,+DC+20005/@38.8918502,-77.0236405,15.55z',
+      '1'
+    ]
+  ]
+};
+
 export default data;
+export default metroData;
+

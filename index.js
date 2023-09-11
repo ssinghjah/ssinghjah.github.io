@@ -1,5 +1,8 @@
 import data from './data.js'
+import metroData './data.js'
 console.log(data)
+console.log(metroData)
+
 console.log("Sep 7, 2023");
 var parkingMarkers = []
 var accoMarkers = []
