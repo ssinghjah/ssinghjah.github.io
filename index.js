@@ -168,7 +168,7 @@ function toggleView(elem){
 }
 
 function toggleMarkerVisibility(allMarkers, markerMap, state){
-    numMarkers = allMarkers.length;
+    var numMarkers = allMarkers.length;
     for(var i=0; i < numMarkers; i++)
     {
         if(state == "on")
