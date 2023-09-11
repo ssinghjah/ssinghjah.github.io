@@ -20,7 +20,7 @@ function initMap() {
   const iconBase = "https://ssinghjah.github.io/images/"
 
   const icons = {
-	parking: iconBase + "metro.png",
+	parking: iconBase + "parking.png",
 	metro: iconBase + "metro.png"
     }
 
@@ -33,21 +33,28 @@ function initMap() {
    let path = window.location.hostname.replace(/\//g,''); // Remove all slashes from string
 
     console.log(data);
-    addMapMarkers(data, icons, markerMap);
+    // addMapMarkers(data, icons, markerMap);
+
+    for (var i=0; i < data.values.length; i++)
+    {
+        addMarker(data.headers, data.values[i], icons.parking, markerMap, parkingMarkers, "parkingList");
+    }
+
+    for (var i=0; i < metroData.values.length; i++)
+    {
+        addMarker(metroData.headers, metroData.values[i], icons.metro, markerMap, metroMarkers, "metroList");
+    }
 }
 
 
 function addMapMarkers(data, icons, markerMap){
- for (var i=0; i < data.values.length; i++)
- {
-    addMarker(data.headers, data.values[i], icons, markerMap, parkingMarkers);
- }
+
 }
 
 var ToDisplay = ["Name", "Address", "Cost", "Distance to the Mall", "Nearest Exit from VA", "Nearest Exit from MD", "Website", "Navigate_URL"];
 var HyperLinks = ["Navigate_URL", "Website"];
 
-function addMarker(infoHeaders, infoValues, icons, markerMap, markerList){
+function addMarker(infoHeaders, infoValues, layerIcon, markerMap, markerList, uiListID){
     var latIndex = infoHeaders.indexOf("Lat");
     var lngIndex = infoHeaders.indexOf("Lng");
 
@@ -78,7 +85,7 @@ function addMarker(infoHeaders, infoValues, icons, markerMap, markerList){
     }
     var marker = new google.maps.Marker({
     position: markerPosition,
-    icon: icons.parking,
+    icon: layerIcon,
     map: markerMap});
 
     var coordInfoWindow = new google.maps.InfoWindow({pixelOffset: new google.maps.Size(0, -25)});
@@ -91,7 +98,7 @@ function addMarker(infoHeaders, infoValues, icons, markerMap, markerList){
             //$("#sideInfo").html(infoHTML);
       });
 
-     $("#parkingList").append(infoHTML + "<br>");
+     $("#" + uiListID).append(infoHTML + "<br>");
 
 
       //return marker
