@@ -167,15 +167,15 @@ function toggleView(elem){
     }
 }
 
-function toggleMarkerVisibility(allMarkers, markerMap, bDisplay){
+function toggleMarkerVisibility(allMarkers, markerMap, state){
     numMarkers = allMarkers.length;
     for(var i=0; i < numMarkers; i++)
     {
-        if(bDisplay)
+        if(state == "on")
         {
             allMarkers[i].setMap(markerMap);
         }
-        else
+        else if(state == "off")
         {
             allMarkers[i].setMap(null);
         }
@@ -184,18 +184,18 @@ function toggleMarkerVisibility(allMarkers, markerMap, bDisplay){
 
 function toggleLayer(id){
     var current_state = $("#" + id).data("state");
-            if (current_state == "on")
-            {
-                $("#" + id).data("state", "off");
-                $("#" + id).addClass("secondary");
-                $("#" + id).removeClass("primary");
-            }
-            else if(current_state == "off")
-            {
-                $("#" + id).data("state", "on");
-                $("#" + id).addClass("primary");
-                $("#" + id).removeClass("secondary");
-            }
+        if (current_state == "on")
+        {
+            $("#" + id).data("state", "off");
+            $("#" + id).addClass("secondary");
+            $("#" + id).removeClass("primary");
+        }
+        else if(current_state == "off")
+        {
+            $("#" + id).data("state", "on");
+            $("#" + id).addClass("primary");
+            $("#" + id).removeClass("secondary");
+        }
 }
 
 window.initMap = initMap;
@@ -210,10 +210,12 @@ $(function()
 
     $("#parkingToggle").click(function(){
        toggleLayer("parkingToggle");
+       toggleMarkerVisibility(parkingMarkers, markerMap, $(this).data("state"));
 	});
 
 	$("#accoToggle").click(function(){
        toggleLayer("accoToggle");
+       toggleMarkerVisibility();
 	});
 });
 
