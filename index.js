@@ -145,7 +145,7 @@ function addMarker(infoHeaders, infoValues, layerIcon, markerMap, markerType, ui
     var coordInfoWindow = new google.maps.InfoWindow({pixelOffset: new google.maps.Size(0, -25)});
     coordInfoWindow.setContent(infoHTML);
     coordInfoWindow.setPosition(markerPosition);
-    markerList.append(marker);
+    markerList.push(marker);
     marker.addListener("click", () => {
             coordInfoWindow.open({anchor: marker, map});
       });
