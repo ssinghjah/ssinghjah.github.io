@@ -37,7 +37,7 @@ function initMap() {
 
     for (var i=0; i < data.values.length; i++)
     {
-        addMarker(data.headers, data.values[i], icons.parking, markerMap, "parking");
+        addMarker(data.headers, data.values[i], icons.parking, "parking");
     }
 
     for (var i=0; i < metroData.values.length; i++)
