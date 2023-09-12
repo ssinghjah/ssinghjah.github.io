@@ -37,24 +37,78 @@ function initMap() {
 
     for (var i=0; i < data.values.length; i++)
     {
-        addMarker(data.headers, data.values[i], icons.parking, markerMap, parkingMarkers, "parkingList");
+        addMarker(data.headers, data.values[i], icons.parking, markerMap, "parking");
     }
 
     for (var i=0; i < metroData.values.length; i++)
     {
-        addMarker(metroData.headers, metroData.values[i], icons.metro, markerMap, metroMarkers, "metroList");
+        addMarker(metroData.headers, metroData.values[i], icons.metro, "metro");
     }
-}
-
-
-function addMapMarkers(data, icons, markerMap){
-
 }
 
 var ToDisplay = ["Name", "Address", "Cost", "Distance to the Mall", "Nearest Exit from VA", "Nearest Exit from MD", "Website", "Navigate_URL"];
 var HyperLinks = ["Navigate_URL", "Website"];
 
-function addMarker(infoHeaders, infoValues, layerIcon, markerMap, markerList, uiListID){
+function displayNationalMall(mallIcon){
+    var lat = Number(infoValues[latIndex]);
+    var lng = Number(infoValues[lngIndex]);
+    var markerPosition = new google.maps.LatLng(lat, lng);
+    var marker = new google.maps.Marker({
+    position: markerPosition,
+    icon: mallIcon,
+    map: markerMap});
+}
+
+
+function addParkingMarkerInfo(infoHeaders, infoValues){
+    var infoHTML = "<div class='markerPopUp'>";
+    var numHeaders = infoHeaders.length;
+
+    nameIndex = $.inArray("Name", infoHeaders);
+    infoHTML += infoValues[nameIndex] + "<br>"
+
+    addressIndex = $.inArray("Address", infoHeaders);
+    infoHTML += infoValues[addressIndex] + "<br>"
+
+    addressIndex = $.inArray("Navigate_URL", infoHeaders);
+    infoHTML += '<strong><a href = "' + info + '" target="_blank">Navigate</a></strong>'
+
+    return infoHTML
+}
+
+function addMetroMarkerInfo(){
+    var infoHTML = "<div class='markerPopUp'>";
+    var numHeaders = infoHeaders.length;
+
+    nameIndex = $.inArray("Name", infoHeaders);
+    infoHTML += infoValues[nameIndex] + "<br>"
+
+    addressIndex = $.inArray("Address", infoHeaders);
+    infoHTML += infoValues[addressIndex] + "<br>"
+
+    addressIndex = $.inArray("Navigate_URL", infoHeaders);
+    infoHTML += '<strong><a href = "' + info + '" target="_blank">Navigate</a></strong>'
+
+    return infoHTML
+}
+
+
+function addMarker(infoHeaders, infoValues, layerIcon, markerMap, markerType, uiListID){
+    uiListID = ""
+    markerList = []
+    if (markerType == "parking")
+    {
+        uiListID = "parkingList"
+        markerList = parkingList
+        infoHTML += addParkingMarkerInfo(infoHeaders, infoValues)
+    }
+    else if(markerType == "metro")
+    {
+        uiListID = "metroList"
+        markerList = metroList
+        infoHTML += addMetroMarkerInfo(infoHeaders, infoValues)
+    }
+
     var latIndex = infoHeaders.indexOf("Lat");
     var lngIndex = infoHeaders.indexOf("Lng");
 
@@ -94,14 +148,9 @@ function addMarker(infoHeaders, infoValues, layerIcon, markerMap, markerList, ui
     markerList.push(marker);
     marker.addListener("click", () => {
             coordInfoWindow.open({anchor: marker, map});
-            //$("#sideInfo").empty();
-            //$("#sideInfo").html(infoHTML);
       });
 
      $("#" + uiListID).append(infoHTML + "<br>");
-
-
-      //return marker
 }
 
 function addMarkerV1(markerFeature, markerIcon, markerMap){
