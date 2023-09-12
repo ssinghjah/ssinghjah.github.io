@@ -99,13 +99,13 @@ function addMarker(infoHeaders, infoValues, layerIcon, markerMap, markerType, ui
     if (markerType == "parking")
     {
         uiListID = "parkingList"
-        markerList = parkingList
+        markerList = parkingMarkers
         infoHTML += addParkingMarkerInfo(infoHeaders, infoValues)
     }
     else if(markerType == "metro")
     {
         uiListID = "metroList"
-        markerList = metroList
+        markerList = metroMarkers
         infoHTML += addMetroMarkerInfo(infoHeaders, infoValues)
     }
 
