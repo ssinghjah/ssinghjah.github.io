@@ -64,14 +64,14 @@ function addParkingMarkerInfo(infoHeaders, infoValues){
     var infoHTML = "<div class='markerPopUp'>";
     var numHeaders = infoHeaders.length;
 
-    nameIndex = $.inArray("Name", infoHeaders);
+    var nameIndex = $.inArray("Name", infoHeaders);
     infoHTML += infoValues[nameIndex] + "<br>"
 
-    addressIndex = $.inArray("Address", infoHeaders);
+    var addressIndex = $.inArray("Address", infoHeaders);
     infoHTML += infoValues[addressIndex] + "<br>"
 
-    addressIndex = $.inArray("Navigate_URL", infoHeaders);
-    infoHTML += '<strong><a href = "' + info + '" target="_blank">Navigate</a></strong>'
+    var navIndex = $.inArray("Navigate_URL", infoHeaders);
+    infoHTML += '<strong><a href = "' + infoValues[navIndex] + '" target="_blank">Navigate</a></strong>'
 
     return infoHTML
 }
