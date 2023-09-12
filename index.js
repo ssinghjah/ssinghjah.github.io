@@ -76,7 +76,7 @@ function addParkingMarkerInfo(infoHeaders, infoValues){
     return infoHTML
 }
 
-function addMetroMarkerInfo(){
+function addMetroMarkerInfo(infoHeaders, infoValues){
     var infoHTML = "<div class='markerPopUp'>";
     var numHeaders = infoHeaders.length;
 
