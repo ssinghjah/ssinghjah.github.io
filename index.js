@@ -93,7 +93,7 @@ function addMetroMarkerInfo(){
 }
 
 
-function addMarker(infoHeaders, infoValues, layerIcon, markerMap, markerType, uiListID){
+function addMarker(infoHeaders, infoValues, layerIcon, markerType){
     var uiListID = ""
     var markerList = []
     if (markerType == "parking")
