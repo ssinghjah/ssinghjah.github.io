@@ -96,6 +96,7 @@ function addMetroMarkerInfo(infoHeaders, infoValues){
 function addMarker(infoHeaders, infoValues, layerIcon, markerType){
     var uiListID = ""
     var markerList = []
+    var infoHTML = ""
     if (markerType == "parking")
     {
         uiListID = "parkingList"
@@ -108,6 +109,10 @@ function addMarker(infoHeaders, infoValues, layerIcon, markerType){
         markerList = metroMarkers
         infoHTML += addMetroMarkerInfo(infoHeaders, infoValues)
     }
+    else{
+	console.log("Error: invalid marker type.")
+	return;
+    }
 
     var latIndex = infoHeaders.indexOf("Lat");
     var lngIndex = infoHeaders.indexOf("Lng");
@@ -117,9 +122,9 @@ function addMarker(infoHeaders, infoValues, layerIcon, markerType){
 
     var markerPosition = new google.maps.LatLng(lat, lng);
     
-    var infoHTML = "<div class='markerPopUp'>";
-    var numHeaders = infoHeaders.length;
-
+    //var infoHTML = "<div class='markerPopUp'>";
+    //var numHeaders = infoHeaders.length;
+    /*
     for (var i = 0; i < ToDisplay.length; i++)
     {
         var header = ToDisplay[i];
@@ -137,6 +142,7 @@ function addMarker(infoHeaders, infoValues, layerIcon, markerType){
             }
         }
     }
+    */
     var marker = new google.maps.Marker({
     position: markerPosition,
     icon: layerIcon,
