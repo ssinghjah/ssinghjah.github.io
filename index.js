@@ -121,28 +121,7 @@ function addMarker(infoHeaders, infoValues, layerIcon, markerType){
     var lng = Number(infoValues[lngIndex]);
 
     var markerPosition = new google.maps.LatLng(lat, lng);
-    
-    //var infoHTML = "<div class='markerPopUp'>";
-    //var numHeaders = infoHeaders.length;
-    /*
-    for (var i = 0; i < ToDisplay.length; i++)
-    {
-        var header = ToDisplay[i];
-        var headerIndex = $.inArray(header, infoHeaders);
-        if (headerIndex !== -1)
-        {
-            var info = infoValues[headerIndex];
-            if($.inArray(header, HyperLinks) !== -1)
-            {
-                infoHTML += '<strong><a href = "' + info + '" target="_blank"> ' + header + ' </a></strong><br>';
-            }
-            else
-            {
-                infoHTML += '<strong>' + header + '</strong>: ' + info + '<br> ';
-            }
-        }
-    }
-    */
+
     var marker = new google.maps.Marker({
     position: markerPosition,
     icon: layerIcon,
@@ -187,12 +166,11 @@ function toggleView(elem){
     {
         $(elem).data("state", "list");
         $(elem).text("Hide List");
-        //$("#map").hide();
         $("#list").removeClass("medium-0");
-	$("#list").addClass("medium-3");
-	$("#map").removeClass("medium-12");
-	$("#map").addClass("medium-9");
-	$("#list").show();
+	    $("#list").addClass("medium-3");
+	    $("#map").removeClass("medium-12");
+	    $("#map").addClass("medium-9");
+	    $("#list").show();
     }
     else if(current_state == "list")
     {
