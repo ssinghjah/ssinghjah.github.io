@@ -159,21 +159,6 @@ function addMarker(infoHeaders, infoValues, layerIcon, markerType){
      $("#" + uiListID).append(infoHTML + "<br>");
 }
 
-function addMarkerV1(markerFeature, markerIcon, markerMap){
-     var marker = new google.maps.Marker({
-      position: markerFeature.position,
-      icon: markerIcon,
-      map: markerMap,});
-
-      var coordInfoWindow = new google.maps.InfoWindow({pixelOffset: new google.maps.Size(0, -25)});
-      coordInfoWindow.setContent(markerFeature.infoWindow);
-      coordInfoWindow.setPosition(markerFeature.position);
-      marker.addListener("click", () =>
-      {
-            coordInfoWindow.open({anchor: marker, map});
-      });
-}
-
 function makeInfoWindowEvent(map, infowindow, marker) {
   google.maps.event.addListener(marker, 'click', function() {
        infowindow.open(map, marker);
@@ -181,14 +166,6 @@ function makeInfoWindowEvent(map, infowindow, marker) {
 }
 
 const TILE_SIZE = 256;
-
-function createInfoWindowContent(latLng, zoom) {
-  return [
-    "PMI Parking",
-    "Spots remaining: " + zoom,
-    "Cost per day: " + zoom,
-  ].join("<br>");
-}
 
 // The mapping between latitude, longitude and pixels is defined by the web
 // mercator projection.
@@ -263,13 +240,24 @@ function toggleLayer(id){
 window.initMap = initMap;
 $(function()
 {
-	$("#viewToggle").data("state", "list");
-	$("#parkingToggle").data("state", "on");
-	$("#parkingToggle").addClass("secondary");
-	$("#accoToggle").data("state", "on");
-	$("#accoToggle").addClass("secondary");
+    $("#viewToggle").data("state", "list");
+    $("#parkingToggle").data("state", "on");
+    $("#parkingToggle").addClass("secondary");
+    $("#accoToggle").data("state", "on");
+    $("#accoToggle").addClass("secondary");
 
-	$("#viewToggle").click(function(){
+    $("#mapToggle").click(function(){
+	$("advisoryContainer").hide();
+	$("mapContainer").show();
+    });
+
+    $("#advisoryToggle").click(function(){
+	$("advisoryContainer").show();
+	$("mapContainer").hide();
+	
+    });
+    
+    $("#viewToggle").click(function(){
 	    toggleView(this);})
 
     $("#parkingToggle").click(function(){

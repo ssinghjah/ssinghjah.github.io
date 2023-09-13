@@ -13,7 +13,10 @@
         <div class="top-bar-left">
           <ul class="menu">
 	    <li>
-	      <strong>WCF Parking and Accomodation</strong>
+	      <a href="#" id="advisoryToggle"><strong>Advisory</strong></a>	     
+	    </li>
+	    <li>
+	      <a href="#" id="mapToggle"><strong>Map</strong></a>
 	    </li>
           </ul>
         </div>
@@ -26,33 +29,10 @@
         </div>
       </div>
     <div class="grid-x grid-padding-x"></div>
-<!--
-    <div class="row">
-            <div class="large-4 medium-4 cell">
-              <div class="callout text-center">
-                <h3>WCF Parking and Accomodation</h3>
-              </div>
- </div> -->
-<!--    <div id="map" class="large-4 medium-4 cell">-->
-<!--    &lt;!&ndash;-->
-<!--      The `defer` attribute causes the callback to execute after the full HTML-->
-<!--      document has been parsed. For non-blocking uses, avoiding race conditions,-->
-<!--      and consistent behavior across browsers, consider loading using Promises.-->
-<!--      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api-->
-<!--      for more information.-->
-<!--      &ndash;&gt;-->
-<!--    </div>-->
     </div>
-      <div class="grid-x grid-padding-x" width="100%">
+    <div id="advisoryContainer"></div>
+      <div id="mapContainer" class="grid-x grid-padding-x" width="100%">
         <div id="map" class="medium-9 cell" style="height:90vh">
-          <div id="list2" style="height:90vh; display:none" class="row">
-            <div class="medium-6 cell" id="parkingList2">
-              <h4>Parking</h4>
-            </div>
-            <div class="medium-6 cell" id="accoList2">
-              <h4>Accomodation</h4>
-            </div>
-            </div>
         </div>
         <div id="list" class="medium-3 cell">
 	  <ul class="tabs" data-tabs id="example-tabs">
