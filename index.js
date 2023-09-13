@@ -231,7 +231,8 @@ $(function()
     });
 
     $("#advisoryToggle").click(function(){
-	$("#mapContainer").show();
+        $("#mapContainer").hide();
+        $("#advisoryContainer").show();
     });
     
     $("#viewToggle").click(function(){
