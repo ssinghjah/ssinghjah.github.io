@@ -71,7 +71,7 @@ function addParkingMarkerInfo(infoHeaders, infoValues){
     infoHTML += infoValues[addressIndex] + "<br>"
 
     var navIndex = $.inArray("Navigate_URL", infoHeaders);
-    infoHTML += '<strong><a href = "' + infoValues[navIndex] + '" target="_blank">Navigate</a></strong>'
+    infoHTML += '<strong><a href = "' + infoValues[navIndex] + '" target="_blank">Navigate</a></strong><br><br>'
 
     return infoHTML
 }
@@ -87,7 +87,7 @@ function addMetroMarkerInfo(infoHeaders, infoValues){
     infoHTML += infoValues[lineIndex] + "<br>"
 
     var navIndex = $.inArray("Navigate_URL", infoHeaders);
-    infoHTML += '<strong><a href = "' + infoValues[navIndex] + '" target="_blank">Navigate</a></strong>'
+    infoHTML += '<strong><a href = "' + infoValues[navIndex] + '" target="_blank">Navigate</a></strong><br><br>'
 
     return infoHTML
 }
