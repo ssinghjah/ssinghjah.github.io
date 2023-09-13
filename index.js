@@ -65,7 +65,7 @@ function addParkingMarkerInfo(infoHeaders, infoValues){
     var numHeaders = infoHeaders.length;
 
     var nameIndex = $.inArray("Name", infoHeaders);
-    infoHTML += infoValues[nameIndex] + "<br>"
+    infoHTML += "<strong>" + infoValues[nameIndex] + "</strong><br>"
 
     var addressIndex = $.inArray("Address", infoHeaders);
     infoHTML += infoValues[addressIndex] + "<br>"
@@ -81,10 +81,10 @@ function addMetroMarkerInfo(infoHeaders, infoValues){
     var numHeaders = infoHeaders.length;
 
     var nameIndex = $.inArray("Name", infoHeaders);
-    infoHTML += infoValues[nameIndex] + "<br>"
+    infoHTML += "<strong>" + infoValues[nameIndex] + "</strong><br>"
 
     var lineIndex = $.inArray("Line", infoHeaders);
-    infoHTML += infoValues[lineIndex] + "<br>"
+    infoHTML += "Lines:&nbsp;" + infoValues[lineIndex] + "<br>"
 
     var navIndex = $.inArray("Navigate_URL", infoHeaders);
     infoHTML += '<strong><a href = "' + infoValues[navIndex] + '" target="_blank">Navigate</a></strong><br><br>'
