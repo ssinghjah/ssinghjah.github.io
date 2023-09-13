@@ -83,8 +83,8 @@ function addMetroMarkerInfo(infoHeaders, infoValues){
     var nameIndex = $.inArray("Name", infoHeaders);
     infoHTML += infoValues[nameIndex] + "<br>"
 
-    var addressIndex = $.inArray("Address", infoHeaders);
-    infoHTML += infoValues[addressIndex] + "<br>"
+    var lineIndex = $.inArray("Line", infoHeaders);
+    infoHTML += infoValues[lineIndex] + "<br>"
 
     var navIndex = $.inArray("Navigate_URL", infoHeaders);
     infoHTML += '<strong><a href = "' + infoValues[navIndex] + '" target="_blank">Navigate</a></strong>'
