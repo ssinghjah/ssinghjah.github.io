@@ -247,13 +247,13 @@ $(function()
     $("#accoToggle").addClass("secondary");
 
     $("#mapToggle").click(function(){
-	$("advisoryContainer").hide();
-	$("mapContainer").show();
+	$("#advisoryContainer").hide();
+	$("#mapContainer").show();
     });
 
     $("#advisoryToggle").click(function(){
-	$("advisoryContainer").show();
-	$("mapContainer").hide();
+	$("#advisoryContainer").show();
+	$("#mapContainer").hide();
 	
     });
     
