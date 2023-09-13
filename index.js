@@ -240,6 +240,7 @@ function toggleLayer(id){
 window.initMap = initMap;
 $(function()
 {
+    $("#advisoryContainer").hide();
     $("#viewToggle").data("state", "list");
     $("#parkingToggle").data("state", "on");
     $("#parkingToggle").addClass("secondary");
@@ -252,9 +253,7 @@ $(function()
     });
 
     $("#advisoryToggle").click(function(){
-	$("#advisoryContainer").show();
-	$("#mapContainer").hide();
-	
+	$("#mapContainer").show();
     });
     
     $("#viewToggle").click(function(){
