@@ -18,8 +18,7 @@ export const data = {
       '38.8976095',
       '-77.065774',
       '2400 Virginia Ave., NW location',
-      'https://www.google.com/maps/dir//2400+Virginia+Ave+NW,+Washington,+DC+20037/@38.8976095,\\\n' +
-        '-77.0544204,17z/',
+      'https://www.google.com/maps/dir/My+Location/2400+Virginia+Ave+NW,+Washington,+DC+20037',
       'https://www.pmi-parking.com/r/parking/home.aspx',
       '$20 per day',
       '0.5 Miles'
@@ -30,20 +29,7 @@ export const data = {
       '38.8498907',
       '-77.0546018',
       '2611 South Clark Street, Arlington, VA',
-      'https://www.google.com/maps/dir//2611+S+Clark+St,+Arlington,+VA+22202/@38.8498907,-77.05\\\n' +
-        '46018,17z/',
-      'https://www.pmi-parking.com/r/parking/home.aspx',
-      '$14 per day',
-      '3-4 miles'
-    ],
-    [
-      '3',
-      'PMI Parking 2',
-      '38.8498907',
-      '-77.0546018',
-      '2611 South Clark Street, Arlington, VA',
-      'https://www.google.com/maps/dir//2611+S+Clark+St,+Arlington,+VA+22202/@38.8498907,-77.05\\\n' +
-        '46018,17z/',
+      'https://www.google.com/maps/dir/My+Location/2611+S+Clark+St,+Arlington,+VA+22202' +
       'https://www.pmi-parking.com/r/parking/home.aspx',
       '$14 per day',
       '3-4 miles'
