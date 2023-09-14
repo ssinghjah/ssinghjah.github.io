@@ -218,16 +218,18 @@ function toggleLayer(id){
 window.initMap = initMap;
 $(function()
 {
-    $("#advisoryContainer").hide();
+    $("#mapContainer").hide();
+    $("#advisoryContainer").show();
     $("#viewToggle").data("state", "list");
     $("#parkingToggle").data("state", "on");
     $("#parkingToggle").addClass("secondary");
     $("#accoToggle").data("state", "on");
     $("#accoToggle").addClass("secondary");
 
-    $("#mapToggle").click(function(){
-	$("#advisoryContainer").hide();
-	$("#mapContainer").show();
+    $("#mapToggle").click(function()
+    {
+        $("#advisoryContainer").hide();
+        $("#mapContainer").show();
     });
 
     $("#advisoryToggle").click(function(){
