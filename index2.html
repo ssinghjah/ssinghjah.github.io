@@ -1,0 +1,265 @@
+<html>
+  <head>
+    <title>WCF Parking and Accomodation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<!--    <link rel="stylesheet" type="text/css" href="./css/foundation.css">-->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./data.js"></script>
+      <script type="module" src="./js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="menu">
+	    <li>
+	      <a href="#" id="advisoryToggle"><strong>Guidelines</strong></a>
+	    </li>
+	    <li>
+	      <a href="#" id="mapToggle"><strong>Map</strong></a>
+	    </li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+              <li><button id="viewToggle" type="button" class="margin10 button toggleButton">Hide List</button></li>
+              <li><button id="parkingToggle" type="button" class="margin10 button toggleButton">Parking</button></li>
+              <li><button id="accoToggle" type="button" class="margin10 button toggleButton">Accommodation</button></li>
+          </ul>
+        </div>
+      </div>
+    <div class="grid-x grid-padding-x"></div>
+    </div>
+        <div class="row">
+  <div class="columns">
+    <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
+      <ul class="orbit-container">
+        <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+        <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+        <li class="is-active orbit-slide">
+          <div class="docs-example-orbit-slide">
+            <p><strong>Parking Announcement:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </li>
+        <li class="orbit-slide">
+          <div class="docs-example-orbit-slide">
+            <p><strong>Accomodation Announcement:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </li>
+        <li class="orbit-slide">
+          <div class="docs-example-orbit-slide">
+            <p><strong>Performers Announcement:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </li>
+      </ul>
+      <nav class="orbit-bullets">
+        <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+        <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+        <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+        <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+      </nav>
+    </div>
+  </div>
+</div>
+    <div id="advisoryContainer" class="grid-container"><div class="row"><h1 id="world-cultural-festival-advisory">WORLD CULTURAL FESTIVAL ADVISORY</h1>
+        <ul class="accordion" data-accordion data-multi-expand="true">
+<!--  <li class="accordion-item" data-accordion-item>-->
+<!--    <a href="#" class="accordion-title">Accordion 1</a>-->
+<!--    <div class="accordion-content" data-tab-content >-->
+<!--      <p>Panel 1. Lorem ipsum dolor</p>-->
+<!--      <a href="#">Nowhere to Go</a>-->
+<!--    </div>-->
+<!--  </li>-->
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title">Accomodations</a>
+    <div class="accordion-content" data-tab-content>
+        <p>Experience the festival in comfort by staying at one of our <a href="https://wcf.artofliving.org/hotels/?">recommended hotels</a>. Booking through our partner for convenience and exclusive rates for festival attendees. </p>
+<h3 id="getting-to-dc-and-the-national-mall">GETTING TO DC and the National Mall</h3>
+<p>DC is easily accessible by various modes of transportation. You may visit <a href="http://washington.org/">washington.org</a> to plan your trip.</p>
+    </div>
+  </li>
+<!--  <li class="accordion-item" data-accordion-item>-->
+<!--    <a href="#" class="accordion-title">Flying</a>-->
+<!--    <p>The DC area boasts three airports, each offering convenient access to the festival:</p>-->
+<!--&lt;!&ndash;<ul>&ndash;&gt;-->
+<!--&lt;!&ndash;<li><strong>Ronald Reagan Washington National Airport (DCA):</strong> The closest airport to DC, easily reached via metro <strong>(Yellow/Blue)</strong> or rideshare.</li>&ndash;&gt;-->
+<!--&lt;!&ndash;<li><strong>Dulles International Airport (IAD):</strong> Located 24 miles west, it provides metro <strong>(Silver)</strong> and rideshare connections to the city.</li>&ndash;&gt;-->
+<!--&lt;!&ndash;<li><strong>Baltimore/Washington International Airport (BWI):</strong> Approximately 30-40 minutes north, accessible by rideshare or bus.</li>&ndash;&gt;-->
+<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+<!--<p><strong>Airport Transfer Deal:</strong> Get to and from the airport with ease. <a href="HTTP://google.com">Use Code: AIRPORTDEAL</a>.</p>-->
+<!--<p><em>Pro Tip:</em> When booking flights, consider comparing prices across these airports. Special rates from partners like Southwest Airlines offer a 5% discount on all festival-bound flights. The code is <strong>WAS</strong> usually for regional flight searches</p>-->
+<!--  </li>-->
+<!--             <li class="accordion-item" data-accordion-item>-->
+<!--    <a href="#" class="accordion-title">Train</a>-->
+<!--<p>DC&#39;s Union Station is a major Amtrak hub, making it a convenient choice for travelers. </p>-->
+<!--&lt;!&ndash;<ul>&ndash;&gt;-->
+<!--&lt;!&ndash;<li>Especially for Northeast residents, Amtrak is a convenient, fun, and eco-conscious way to travel. Amtrak Acela and Northeast Regional lines service the East Coast corridor from DC up to Boston</li>&ndash;&gt;-->
+<!--&lt;!&ndash;<li>It is centrally located within the city and is about a mile away from the 7th Street entrance (open to all audiences) of the mall (can walk of take Circulator bus). </li>&ndash;&gt;-->
+<!--&lt;!&ndash;<li>Metro Red Line has a stop here for transport to other areas of the city upon arrival or there are many taxis/rideshare opportunities.</li>&ndash;&gt;-->
+<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+<!--<p>Check the <a href="https://www.amtrak.com/trains-to-washington-dc?">live listing</a> of all trains to Washington for scheduling.</p>-->
+<!--<h4 id="car-">CAR:</h4>-->
+<!--<p>For DC Metro Area residents, Waze, Google Maps, and Apple Maps can help you navigate to the festival. However, <strong>we strongly recommend using rideshare or the metro to avoid traffic and parking hassles</strong>.</p>-->
+<!--<h4 id="dc-public-buses-to-national-mall">DC Public Buses to National Mall</h4>-->
+<!--<p><img src="https://github.com/bodysattv/WCF/assets/16103599/bd97a7d1-3fab-4862-9399-84b4ff441e53" alt="image">-->
+<!--<img src="https://github.com/bodysattv/WCF/assets/16103599/0eb6d78a-a560-495c-8346-0366ed5e3042" alt="image">-->
+<!--<img src="https://github.com/bodysattv/WCF/assets/16103599/7451131c-bb69-498a-b829-db09677dca4e" alt="image">-->
+<!--<img src="https://github.com/bodysattv/WCF/assets/16103599/3be62366-0702-4012-b8e8-0cb2e2adca81" alt="image">-->
+<!--<img src="https://github.com/bodysattv/WCF/assets/16103599/6f3fa163-23d4-4f7a-9bc1-7a89e36db471" alt="image"></p>-->
+<!--<ul>-->
+<!--<li><a href="https://www.wmata.com/service/bus/">Metrobus: 30, 32, 34, 36, 70, 74, 79</a></li>-->
+<!--<li><a href="https://www.dashbus.com/">DASH: D4, D6</a></li>-->
+<!--<li><a href="https://www.getyourguide.com/washington-dc-l62/">National Mall Trolley</a></li>-->
+<!--<li><a href="https://www.bigbustours.com/en/washington-dc/washington-dc-sightseeing-tours">Tour Buses</a></li>-->
+<!--<li><a href="https://dccirculator.com">Circulator Buses</a></li>-->
+<!--</ul>-->
+<!--<p>They circulate around the National Mall and cover areas from the <a href="https://dccirculator.com/explore/where-we-go/national-mall/">Union Station to the Lincoln Memorial</a></p>-->
+<!--<p>Sept. 29: 7 am – 8 pm-->
+<!--Sept. 30: 9 am – 8 pm-->
+<!--Oct. 1:   9 am – 7 pm </p>-->
+<!--<p><img width="427" alt="image" src="https://github.com/bodysattv/WCF/assets/16103599/3dae2ef9-89f7-4a2d-b6cb-a7759f6ba5d4"></p>-->
+<!--<p>All buses are free to ride as of September 2023.</p>-->
+<!--             </li>-->
+</ul>
+        <h2 id="travel-accommodations">TRAVEL &amp; ACCOMMODATIONS</h2>
+<p>Discover the world&#39;s diverse cultures at the World Cultural Festival on the National Mall with ease! Here&#39;s how to get to DC and navigate the city for an unforgettable festival experience.</p>
+<p><img width="574" alt="image" src="https://github.com/bodysattv/WCF/assets/16103599/b46fd074-f865-4f97-b495-52f2b330fad1"></p>
+<p><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12422.378702985598!2d-77.04553973626507!3d38.88751437160837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b79b5aff3d31%3A0x3a08ab4ca2062741!2sNational%20Mall!5e0!3m2!1sen!2sus!4v1694149356922!5m2!1sen!2sus">![Map]</a></p>
+<h3 id="accommodations">ACCOMMODATIONS</h3>
+<!--<p>Experience the festival in comfort by staying at one of our <a href="https://wcf.artofliving.org/hotels/?">recommended hotels</a>. Booking through our partner for convenience and exclusive rates for festival attendees. </p>-->
+<!--<h3 id="getting-to-dc-and-the-national-mall">GETTING TO DC and the National Mall</h3>-->
+<!--<p>DC is easily accessible by various modes of transportation. May visit <a href="http://washington.org/">washington.org</a> to plan your trip.</p>-->
+<!--<h4 id="flying-">FLYING:</h4>-->
+<!--<p>The DC area boasts three airports, each offering convenient access to the festival:</p>-->
+<!--<ul>-->
+<!--<li><strong>Ronald Reagan Washington National Airport (DCA):</strong> The closest airport to DC, easily reached via metro <strong>(Yellow/Blue)</strong> or rideshare.</li>-->
+<!--<li><strong>Dulles International Airport (IAD):</strong> Located 24 miles west, it provides metro <strong>(Silver)</strong> and rideshare connections to the city.</li>-->
+<!--<li><strong>Baltimore/Washington International Airport (BWI):</strong> Approximately 30-40 minutes north, accessible by rideshare or bus.</li>-->
+<!--</ul>-->
+<!--<p><strong>Airport Transfer Deal:</strong> Get to and from the airport with ease. <a href="HTTP://google.com">Use Code: AIRPORTDEAL</a>.</p>-->
+<!--<p><em>Pro Tip:</em> When booking flights, consider comparing prices across these airports. Special rates from partners like Southwest Airlines offer a 5% discount on all festival-bound flights. The code is <strong>WAS</strong> usually for regional flight searches</p>-->
+<!--<h4 id="train-">TRAIN:</h4>-->
+<!--<p>DC&#39;s Union Station is a major Amtrak hub, making it a convenient choice for travelers. </p>-->
+<!--<ul>-->
+<!--<li>Especially for Northeast residents, Amtrak is a convenient, fun, and eco-conscious way to travel. Amtrak Acela and Northeast Regional lines service the East Coast corridor from DC up to Boston</li>-->
+<!--<li>It is centrally located within the city and is about a mile away from the 7th Street entrance (open to all audiences) of the mall (can walk of take Circulator bus). </li>-->
+<!--<li>Metro Red Line has a stop here for transport to other areas of the city upon arrival or there are many taxis/rideshare opportunities.</li>-->
+<!--</ul>-->
+<!--<p>Check the <a href="https://www.amtrak.com/trains-to-washington-dc?">live listing</a> of all trains to Washington for scheduling.</p>-->
+<!--<h4 id="car-">CAR:</h4>-->
+<!--<p>For DC Metro Area residents, Waze, Google Maps, and Apple Maps can help you navigate to the festival. However, <strong>we strongly recommend using rideshare or the metro to avoid traffic and parking hassles</strong>.</p>-->
+<!--<h4 id="dc-public-buses-to-national-mall">DC Public Buses to National Mall</h4>-->
+<!--<p><img src="https://github.com/bodysattv/WCF/assets/16103599/bd97a7d1-3fab-4862-9399-84b4ff441e53" alt="image">-->
+<!--<img src="https://github.com/bodysattv/WCF/assets/16103599/0eb6d78a-a560-495c-8346-0366ed5e3042" alt="image">-->
+<!--<img src="https://github.com/bodysattv/WCF/assets/16103599/7451131c-bb69-498a-b829-db09677dca4e" alt="image">-->
+<!--<img src="https://github.com/bodysattv/WCF/assets/16103599/3be62366-0702-4012-b8e8-0cb2e2adca81" alt="image">-->
+<!--<img src="https://github.com/bodysattv/WCF/assets/16103599/6f3fa163-23d4-4f7a-9bc1-7a89e36db471" alt="image"></p>-->
+<!--<ul>-->
+<!--<li><a href="https://www.wmata.com/service/bus/">Metrobus: 30, 32, 34, 36, 70, 74, 79</a></li>-->
+<!--<li><a href="https://www.dashbus.com/">DASH: D4, D6</a></li>-->
+<!--<li><a href="https://www.getyourguide.com/washington-dc-l62/">National Mall Trolley</a></li>-->
+<!--<li><a href="https://www.bigbustours.com/en/washington-dc/washington-dc-sightseeing-tours">Tour Buses</a></li>-->
+<!--<li><a href="https://dccirculator.com">Circulator Buses</a></li>-->
+<!--</ul>-->
+<!--<p>They circulate around the National Mall and cover areas from the <a href="https://dccirculator.com/explore/where-we-go/national-mall/">Union Station to the Lincoln Memorial</a></p>-->
+<!--<p>Sept. 29: 7 am – 8 pm-->
+<!--Sept. 30: 9 am – 8 pm-->
+<!--Oct. 1:   9 am – 7 pm </p>-->
+<!--<p><img width="427" alt="image" src="https://github.com/bodysattv/WCF/assets/16103599/3dae2ef9-89f7-4a2d-b6cb-a7759f6ba5d4"></p>-->
+<!--<p>All buses are free to ride as of September 2023.</p>-->
+<h3 id="getting-around-dc">GETTING AROUND DC</h3>
+<p>Welcome to the nation&#39;s capital! Getting around is a breeze:</p>
+<ul>
+<li><strong>Ride-Share Apps:</strong> Convenient and readily available. Consider using the Uber or Lyft discount code for added savings.</li>
+<li><strong>Local DC Bus Tour:</strong> Experience DC&#39;s attractions with a customized bus tour. <a href="HTTP://google.com">Book Your Tour Here</a>.</li>
+<li><strong>Rentable Bikes &amp; Scooters:</strong> Eco-friendly and great for short trips. Find them throughout the city.</li>
+<li><strong>DC Metro System:</strong> The extensive metro system covers the city, providing easy access to the National Mall. <a href="https://www.wmata.com/schedules/trip-planner/">Metro&#39;s Trip Planner</a></li>
+</ul>
+<p><img width="368" alt="image" src="https://github.com/bodysattv/WCF/assets/16103599/36e0bbab-cf68-4cda-966f-c9346f19aa1c"></p>
+<p><a href="https://awesome-con.com/wp-content/uploads/2023/06/2023-System-Map.pdf">View Metro Map</a>.</p>
+<h4 id="weekend-metro-hours-">Weekend Metro Hours:</h4>
+<ul>
+<li>Friday: 5 AM – 1 AM</li>
+<li>Saturday: 7 AM – 1 AM</li>
+<li>Sunday: 7 AM – 12 AM</li>
+</ul>
+<p>For help planning your trip and to confirm hours, please visit the <a href="http://wmata.com/">WMATA website</a>.</p>
+<p>Did you know? DC is a pedestrian and commuter-friendly city, with 58% of travel done by walking, biking, and public transit. Learn more about moving around DC from our friends at Washington.org: <a href="https://www.washington.org/getting-around-washington-dc">Getting Around DC</a></p>
+<p><em>Pro Tip:</em> Use Google Maps with the bus symbol to find step-by-step public transit directions to your destination.</p>
+<h4 id="fare-information">FARE INFORMATION</h4>
+<ul>
+<li>Metrorail fares range from $2 to $6 one-way based on distance.</li>
+<li>After 9:30 p.m. and on weekends, all fares are a flat $2 for one-way trips.</li>
+<li>Metrobus fares are $2 for regular routes, with a $2 transfer discount when transferring to/from Metrorail.</li>
+<li>Determine your fare using Metro&#39;s trip planner, considering the date and time you plan to travel.</li>
+<li><a href="https://wmata.com/fares/MobilePay/index.cfm?">SmarTrip mobile pay</a> is the best option to skip fare vending machine lines. Download the SmarTrip app for iOS or Android to purchase a mobile SmarTrip card or passes.</li>
+<li>One-Day Passes are available for $13, allowing unlimited trips on Metrorail and Metrobus throughout the day.</li>
+</ul>
+<h3 id="parking-">PARKING:</h3>
+<p>For those who prefer to drive, we recommend booking affordable parking in advance through SpotHero. Reserve your spot at the National Mall SpotHero Parking Page to enjoy discounts of up to 50% off drive-up rates.
+<a href="https://parking.com/washington-dc/destinations/world-culture-festival?start=2023-09-12T12%3A00&amp;stop=2023-09-12T14%3A00&amp;lot_id=&amp;showListOnly=0&amp;view=daily&amp;sw&amp;ne&amp;facility&amp;valet=n&amp;general=&amp;displayFullCity=0">https://parking.com/washington-dc/destinations/world-culture-festival?start=2023-09-12T12%3A00&amp;stop=2023-09-12T14%3A00&amp;lot_id=&amp;showListOnly=0&amp;view=daily&amp;sw&amp;ne&amp;facility&amp;valet=n&amp;general=&amp;displayFullCity=0</a></p>
+<h3 id="metro-stations-close-to-the-national-mall-">METRO STATIONS CLOSE TO THE NATIONAL MALL:</h3>
+<ul>
+<li><strong>Smithsonian (Blue/Orange/Silver Line)</strong> - Closest to the National Mall, but often very crowded during the festival.</li>
+<li><strong>Federal Triangle (Blue/Orange/Silver Line)</strong> - Located a short distance from the National Mall.</li>
+<li><strong>L&#39;Enfant Plaza (Blue/Orange/Silver/Green/Yellow Line)</strong> - Convenient for festivalgoers, offering multiple metro line options.</li>
+</ul>
+<p><em>Caution Advisory:</em> Smithsonian station may be the closest, but it tends to be extremely crowded during the festival on the Mall.</p>
+<p>Embrace the world&#39;s cultures at the World Cultural Festival on the National Mall. We can&#39;t wait to celebrate diversity and heritage with you!</p>
+<p>For event updates and additional information, visit our website or contact our event information desk.</p>
+<h3 id="discover-d-c-deals">DISCOVER D.C. DEALS</h3>
+<p>Extend your stay in the nation&#39;s capital and explore all that D.C. has to offer.</p>
+        <p>We have a deal with BigBus tours. You can use <a href="" target="_blank">this exclusive link</a> to book open-top sightseeing tours through DC's most impressive and iconic locations and landmarks. They provide flexible tours, allowing you to hop on and off the bus at various bus stops, which are served regularly by their buses.</p>
+        <p>Visit <a href="Washington.org">Washington.org</a> to find a curated selection of deals and discounts available during your cultural adventure in the city. </p>
+<p><a href="https://wcf.artofliving.org/">WORLD CULTURE FESTIVAL</a>
+<a href="https://wcf.artofliving.org/Contact/">Contact Information</a></p>
+<p><em>Note:</em> Please stay updated on event changes and travel advisories closer to the festival date for the latest information.
+Check back for updated road closures and Metro stop closures list here:</p>
+</div>.</div>
+      <div id="mapContainer" class="grid-x grid-padding-x" width="100%">
+        <div id="map" class="medium-9 cell" style="height:90vh">
+        </div>
+        <div id="list" class="medium-3 cell">
+	  <ul class="tabs" data-tabs id="example-tabs">
+	    <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Parking</a></li>
+	    <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Metro Stations</a></li>
+	    <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">Accomodation</a></li>
+	  </ul>
+	  <div class="tabs-content" data-tabs-content="example-tabs">
+	    <div class="tabs-panel is-active" id="panel1">
+	      <div id="parkingList" class="row">
+		<h4>Parking</h4>
+	      </div>
+	    </div>
+	    <div class="tabs-panel" id="panel2">
+	      <div id="metroList" class="row">
+		<h4>Metro Stations</h4>
+	      </div>
+	    </div>
+	    <div class="tabs-panel" id="panel3">
+	      <div id="accoList" class="row">
+		<h4>Accomodation</h4>
+	      </div>
+	    </div>
+
+	  </div>
+          <div class="row">
+          <!--<button id="viewToggle" class="submit success button">View List</button> !-->
+          </div>
+          <div id="sideInfo" class="row">
+          </div>
+        </div>
+      </div>
+<!--      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>-->
+<!--      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.core.js"></script>-->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVpFm6MJYLgNAdyOTkI_jPyZ0B1bjgbmI&callback=initMap&v=weekly"
+      defer
+    ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
