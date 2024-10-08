@@ -10,6 +10,15 @@
     margin: 10px;
 }
 
+.margin5{
+  margin:5px;
+}
+li::marker {
+  color: rgb(58, 36, 0);
+  size: 10
+}
+
+
 /* 
  * Optional: Makes the sample page fill the window. 
  */

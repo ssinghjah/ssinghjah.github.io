@@ -1,27 +1,28 @@
-import { data, metroData } from './data.js';
+import { data, otherData } from './data.js';
 
 console.log(data)
-console.log(metroData)
+console.log(otherData)
 
 console.log("Sep 7, 2023");
-var parkingMarkers = []
+var aolrcMarkers = []
 var accoMarkers = []
-var metroMarkers = []
+var otherMarkers = []
 var markerMap;
+var MAP_CENTER = [36.222206,-81.646708]
 
 function initMap() {    
-  const dc = new google.maps.LatLng(38.906624, -77.065774);
+  const dc = new google.maps.LatLng(MAP_CENTER[0], MAP_CENTER[1]);
   markerMap = new google.maps.Map(document.getElementById("map"), {
     center: dc,
-    zoom: 15,
+    zoom: 8,
   });
 
   const iconBaseOld = "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
   const iconBase = "https://ssinghjah.github.io/images/"
 
   const icons = {
-	parking: iconBase + "parking.png",
-	metro: iconBase + "metro.png"
+	aolrc: iconBase + "parking.png",
+	other: iconBase + "metro.png"
     }
 
   const iconsOld = {
@@ -37,12 +38,12 @@ function initMap() {
 
     for (var i=0; i < data.values.length; i++)
     {
-        addMarker(data.headers, data.values[i], icons.parking, "parking");
+        addMarker(data.headers, data.values[i], icons.aolrc, "aolrc");
     }
 
-    for (var i=0; i < metroData.values.length; i++)
+    for (var i=0; i < otheroData.values.length; i++)
     {
-        addMarker(metroData.headers, metroData.values[i], icons.metro, "metro");
+        addMarker(otherData.headers, otherData.values[i], icons.other, "other");
     }
 }
 
@@ -60,7 +61,7 @@ function displayNationalMall(mallIcon){
 }
 
 
-function addParkingMarkerInfo(infoHeaders, infoValues){
+function addAOLRCMarkerInfo(infoHeaders, infoValues){
     var infoHTML = "<div class='markerPopUp'>";
     var numHeaders = infoHeaders.length;
 
@@ -70,13 +71,16 @@ function addParkingMarkerInfo(infoHeaders, infoValues){
     var addressIndex = $.inArray("Address", infoHeaders);
     infoHTML += infoValues[addressIndex] + "<br>"
 
+    var websiteIndex = $.inArray("Website", infoHeaders);
+    infoHTML += '<strong><a href="'+ infoValues[websiteIndex] + '" target="_blank">Website</a></strong>'+ "<br>"
+
     var navIndex = $.inArray("Navigate_URL", infoHeaders);
     infoHTML += '<strong><a href = "' + infoValues[navIndex] + '" target="_blank">Navigate</a></strong><br><br>'
 
     return infoHTML
 }
 
-function addMetroMarkerInfo(infoHeaders, infoValues){
+function addOtherMarkerInfo(infoHeaders, infoValues){
     var infoHTML = "<div class='markerPopUp'>";
     var numHeaders = infoHeaders.length;
 
@@ -97,17 +101,17 @@ function addMarker(infoHeaders, infoValues, layerIcon, markerType){
     var uiListID = ""
     var markerList = []
     var infoHTML = ""
-    if (markerType == "parking")
+    if (markerType == "aolrc")
     {
-        uiListID = "parkingList"
-        markerList = parkingMarkers
-        infoHTML += addParkingMarkerInfo(infoHeaders, infoValues)
+        uiListID = "aolrcList"
+        markerList = aolrcMarkers
+        infoHTML += addAOLRCMarkerInfo(infoHeaders, infoValues)
     }
-    else if(markerType == "metro")
+    else if(markerType == "other")
     {
-        uiListID = "metroList"
-        markerList = metroMarkers
-        infoHTML += addMetroMarkerInfo(infoHeaders, infoValues)
+        uiListID = "otherList"
+        markerList = otherMarkers
+        infoHTML += addOtherMarkerInfo(infoHeaders, infoValues)
     }
     else{
 	console.log("Error: invalid marker type.")
@@ -219,30 +223,58 @@ window.initMap = initMap;
 $(function()
 {
     $("#mapContainer").hide();
-    $("#advisoryContainer").show();
+    $("#guidelinesContainer").show();
+    $("#volunteerLinksContainer").hide();
+    $("#resourcesContainer").hide();
+    $("#mapMarkersToggle").hide()
+
     $("#viewToggle").data("state", "list");
-    $("#parkingToggle").data("state", "on");
-    $("#parkingToggle").addClass("secondary");
+    $("#aolrcToggle").data("state", "on");
+    $("#aolrcToggle").addClass("primary");
     $("#accoToggle").data("state", "on");
-    $("#accoToggle").addClass("secondary");
+    $("#accoToggle").addClass("primary");
 
     $("#mapToggle").click(function()
     {
-        $("#advisoryContainer").hide();
+        $("#guidelinesContainer").hide();
+        $("#resourcesContainer").hide();
         $("#mapContainer").show();
+        $("#volunteerLinksContainer").hide();
+        $("#mapMarkersToggle").show()
     });
 
     $("#advisoryToggle").click(function(){
+        $("#guidelinesContainer").show();
+        $("#resourcesContainer").hide();
         $("#mapContainer").hide();
-        $("#advisoryContainer").show();
+        $("#volunteerLinksContainer").hide();
+        $("#mapMarkersToggle").hide()
+    });
+
+    $("#resourcesToggle").click(function(){
+        $("#guidelinesContainer").hide();
+        $("#resourcesContainer").show();
+        $("#mapContainer").hide();
+        $("#volunteerLinksContainer").hide();
+        $("#mapMarkersToggle").hide()
+
+    });
+
+    $("#volunteerLinksToggle").click(function(){
+        $("#guidelinesContainer").hide();
+        $("#resourcesContainer").hide();
+        $("#mapContainer").hide();
+        $("#volunteerLinksContainer").show();
+        $("#mapMarkersToggle").hide()
+
     });
     
     $("#viewToggle").click(function(){
 	    toggleView(this);})
 
-    $("#parkingToggle").click(function(){
-       toggleLayer("parkingToggle");
-       toggleMarkerVisibility(parkingMarkers, markerMap, $(this).data("state"));
+    $("#aolrcToggle").click(function(){
+       toggleLayer("aolrcToggle");
+       toggleMarkerVisibility(aolrcMarkers, markerMap, $(this).data("state"));
 	});
 
 	$("#accoToggle").click(function(){

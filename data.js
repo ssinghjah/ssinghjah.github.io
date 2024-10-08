@@ -1,5 +1,5 @@
 export const data = {
-  info_type: 'parking',
+  info_type: 'aolrc',
   headers: [
     'ID',
     'Name',
@@ -14,31 +14,42 @@ export const data = {
   values: [
     [
       '1',
-      'PMI Parking 1',
-      '38.8976095',
-      '-77.065774',
-      '2400 Virginia Ave., NW location',
-      'https://www.google.com/maps/dir/My+Location/2400+Virginia+Ave+NW,+Washington,+DC+20037',
-      'https://www.pmi-parking.com/r/parking/home.aspx',
+      'Boone Chamber of Commerce',
+      '36.222089',
+      '-81.647023',
+      'The Summit Pickleball at 278 Industrial Park Drive Boone, NC 28607',
+      'https://www.google.com/maps/dir//278+Industrial+Park+Dr,+Boone,+NC+28607/@36.2216025,-81.646497,18.62z/',
+      'https://www.boonechamber.com/news/donation-intake-and-pick-up-information',
       '$20 per day',
       '0.5 Miles'
     ],
     [
       '2',
-      'PMI Parking 2',
-      '38.8498907',
-      '-77.0546018',
-      '2611 South Clark Street, Arlington, VA',
-      'https://www.google.com/maps/dir/My+Location/2611+S+Clark+St,+Arlington,+VA+22202' +
-      'https://www.pmi-parking.com/r/parking/home.aspx',
+      'Wine to Water',
+      '36.2188674',
+      '-81.7148165',
+      '689 George Wilson Rd, Boone, NC 28607',
+      'https://www.google.com/maps/dir//Wine+To+Water,+689+George+Wilson+Rd,+Boone,+NC+28607/@36.2188674,-81.7148165,18.41z',
+      'https://www.wtw.org/',
+      '$14 per day',
+      '3-4 miles'
+    ],
+    [
+      '3',
+      'Banner Elk Elementary School',
+      '36.1484427',
+      '-81.8580393',
+      '155 Orchard Ln, Banner Elk, NC 28604',
+      'https://www.google.com/maps/dir//Banner+Elk+Elementary+School,+155+Orchard+Ln,+Banner+Elk,+NC+28604/@36.1484427,-81.8580393,16z',
+      'https://www.google.com/maps/dir//Banner+Elk+Elementary+School,+155+Orchard+Ln,+Banner+Elk,+NC+28604/@36.1484427,-81.8580393,16z',
       '$14 per day',
       '3-4 miles'
     ]
   ]
 };
 
-export const metroData = {
-  info_type: 'metros',
+export const otherData = {
+  info_type: 'other',
   headers: [
     'ID',
     'Name',
