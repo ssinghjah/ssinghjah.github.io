@@ -19,6 +19,52 @@ li::marker {
 }
 
 
+/* Container for contact information */
+.contact-info {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+.contact-info h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* List styles */
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+/* Icon styles (you'll need to add appropriate icons) */
+.contact-info .icon {
+  display: inline-block;
+  width: 20px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* Link styles */
+.contact-info a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
 /* 
  * Optional: Makes the sample page fill the window. 
  */
