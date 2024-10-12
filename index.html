@@ -21,7 +21,10 @@
                </li>
                <li>
                 <a href="#" id="resourcesToggle"><strong>County Resources</strong></a>	     
-             </li>
+               </li>
+               <li>
+                  <a href="https://iahv.networkforgood.com/projects/235482-hurricane-helene-flood-relief" target="_blank" id="iahvToggle"><strong>IAHV Helene Fundraiser</strong></a>	     
+               </li>
              <!-- <li>
                 <a href="#" id="volunteerLinksToggle"><strong>Volunteer Links</strong></a>
              </li> -->
@@ -180,7 +183,7 @@
          </div>
          .
       </div>
-      <div id="mapContainer" class="grid-x grid-padding-x" width="100%">
+      <div id="mapContainer" class="grid-x grid-padding-x" style="display:none" width="100%">
          <div id="map" class="medium-9 cell" style="height:90vh">
          </div>
          <div id="list" class="medium-3 cell">
@@ -213,7 +216,7 @@
             </div>
          </div>
       </div>
-      <div id="resourcesContainer" class="grid-container">
+      <div id="resourcesContainer" class="grid-container" style="display:none">
          <div class="row">
             <img src="images/nc_counties.png"></img>
          </div>
@@ -392,12 +395,16 @@
             </div> -->
         </div>
       </div>
-      <hr>
+      
+      <div style="display:none" id="iahvContainer" class="grid-x grid-padding-x" width="100%">
+         <div class="row">
+            <a href="https://iahv.networkforgood.com/projects/235482-hurricane-helene-flood-relief" target="_blank"><button type="button" class="margin5 button">IAHV Helene Relief Fundraiser</button></a>
+         </div>
+      </div>
       
 
       <div id="volunteerLinksContainer" class="grid-container">
         <div class="row">
-          <p>Links</p>
         </div>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>

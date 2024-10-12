@@ -219,14 +219,29 @@ function toggleLayer(id){
         }
 }
 
+function showHideContainers(list, toShow){
+    $.each(list, function(index, item){
+        if (item == toShow){
+            $(item).show();
+        }
+        else{
+            $(item).hide();
+        }
+    })
+
+}
+
 window.initMap = initMap;
 $(function()
 {
-    $("#mapContainer").hide();
-    $("#guidelinesContainer").show();
-    $("#volunteerLinksContainer").hide();
-    $("#resourcesContainer").hide();
-    $("#mapMarkersToggle").hide()
+    const CONTAINERS_LIST = ["#mapContainer", "#guidelinesContainer", "#iahvContainer", "#resourcesContainer"]
+    showHideContainers(CONTAINERS_LIST, "#guidelinesContainer")
+
+    // $("#mapContainer").hide();
+    // $("#guidelinesContainer").show();
+    // $("#iahvContainer").hide();
+    // $("#resourcesContainer").hide();
+    // $("#mapMarkersToggle").hide()
 
     $("#viewToggle").data("state", "list");
     $("#aolrcToggle").data("state", "on");
@@ -236,36 +251,44 @@ $(function()
 
     $("#mapToggle").click(function()
     {
-        $("#guidelinesContainer").hide();
-        $("#resourcesContainer").hide();
-        $("#mapContainer").show();
-        $("#volunteerLinksContainer").hide();
-        $("#mapMarkersToggle").show()
+        showHideContainers(CONTAINERS_LIST, "#mapContainer")
+
+        // $("#guidelinesContainer").hide();
+        // $("#resourcesContainer").hide();
+        // $("#mapContainer").show();
+        // $("#iahvContainer").hide();
+        // $("#mapMarkersToggle").show()
     });
 
     $("#advisoryToggle").click(function(){
-        $("#guidelinesContainer").show();
-        $("#resourcesContainer").hide();
-        $("#mapContainer").hide();
-        $("#volunteerLinksContainer").hide();
-        $("#mapMarkersToggle").hide()
+        showHideContainers(CONTAINERS_LIST, "#guidelinesContainer")
+
+        // $("#guidelinesContainer").show();
+        // $("#resourcesContainer").hide();
+        // $("#mapContainer").hide();
+        // $("#iahvContainer").hide();
+        // $("#mapMarkersToggle").hide()
     });
 
     $("#resourcesToggle").click(function(){
-        $("#guidelinesContainer").hide();
-        $("#resourcesContainer").show();
-        $("#mapContainer").hide();
-        $("#volunteerLinksContainer").hide();
-        $("#mapMarkersToggle").hide()
+        showHideContainers(CONTAINERS_LIST, "#resourcesContainer")
+        
+        // $("#guidelinesContainer").hide();
+        // $("#resourcesContainer").show();
+        // $("#mapContainer").hide();
+        // $("#iahvContainer").hide();
+        // $("#mapMarkersToggle").hide()
 
     });
 
-    $("#volunteerLinksToggle").click(function(){
-        $("#guidelinesContainer").hide();
-        $("#resourcesContainer").hide();
-        $("#mapContainer").hide();
-        $("#volunteerLinksContainer").show();
-        $("#mapMarkersToggle").hide()
+    $("#iahvToggle").click(function(){
+        // showHideContainers(CONTAINERS_LIST, "#iahvContainer")
+
+        // $("#guidelinesContainer").hide();
+        // $("#resourcesContainer").hide();
+        // $("#mapContainer").hide();
+        // $("#iahvContainer").show();
+        // $("#mapMarkersToggle").hide()
 
     });
     
